@@ -8,16 +8,6 @@ const bgContainer = document.getElementById('bgContainer');
 const url = (city) =>
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
 
-// var searchInput = 'search';
-
-// document.addEventListener("DOMContentLoaded", function(event) {
-//     // Your code to run since DOM is loaded and ready
-//     var autocomplete;
-//     autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-//         types: ['geocode'],
-//     });  
-// });
-
 async function getWeatherByLocation(city) {
     const resp = await fetch(url(city), { origin: "cors" });
     const respData = await resp.json();
